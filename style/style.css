@@ -53,7 +53,7 @@ header h2 {
     font-family: "Poppins", sans-serif;
     position: absolute;
     left: 100px;
-    font-size: 28px;
+    font-size: 20px;
 }
 
 header h2, header ul li a, .field-text-home h1 span, .field-text-home h3 {
@@ -571,16 +571,33 @@ iframe {
 }
 
 .social-media {
-    width: 100%;
+    display: flex;
+    justify-content: center; /* Menempatkan ikon di tengah secara horizontal */
+    align-items: center;
+    gap: 0%; /* Jarak antar ikon di desktop */
 }
 
 .social-media i {
-    margin-right: 100px;
+    margin: 0%; /* Menghapus margin agar menggunakan flex gap */
 }
 
-.social-media i:nth-child(1) {
-    margin-left: 60px;
+/* Media query untuk perangkat dengan lebar maksimum 600px */
+@media (max-width: 600px) {
+    .social-media {
+        flex-direction: column; /* Menyusun ikon secara vertikal di perangkat kecil */
+        gap: 5%; /* Mengatur jarak antar ikon di perangkat kecil */
+        align-items: center; /* Menempatkan ikon di tengah */
+    }
 }
+
+
+
+
+
+
+
+
+
 
 input {
     display: block;
